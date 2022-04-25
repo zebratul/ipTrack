@@ -1,0 +1,27 @@
+{
+  "name": "iptrack",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --out-dir=build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zebratul/ipTrack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zebratul/ipTrack/issues"
+  },
+  "homepage": "https://github.com/zebratul/ipTrack#readme",
+  "dependencies": {
+    "mapbox-gl": "^2.8.2",
+    "parcel": "^2.0.0-rc.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0"
+  }
+}
