@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", startIp); //отображаем �
 
 //---------------------------------------------------------------async func block---------------------------------------------------------
 
-async function startIp(){
+async function startIp(){  //отображаем локацию, с которой зашёл пользователь 
     let response = await fetch(`https://api.ipify.org?format=json`,{
         method: 'GET', 
         });
@@ -25,7 +25,7 @@ async function startIp(){
     input.value = '';
 }
 
-async function submitIp(event) { //перерисовываем карту после получения ответа от службы геолокации по IP
+async function submitIp(event) { //перерисовываем карту по введённому IP после получения ответа от службы геолокации 
     event.preventDefault();
     const apiKey = 'at_cTRu9FLcQSXSN7NvdPwjWq4zOl4y8';  //ключ хорошо бы хранить на сервере, чтобы у пользователя не было доступа сюда 
     const apiUrl = 'https://geo.ipify.org/api/v1?';
