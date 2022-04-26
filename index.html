@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | IP Address Tracker</title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>  <!-- API для карты -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
   <form class="finder">
@@ -40,6 +40,7 @@
     </form>
 
   <div class="map" id="map"></div>
-  <script src="../ipTrack/src/index.js"></script>
+  <img class="pointer" src="/images/icon-location.svg" alt="pointer"/>
+  <script src="/src/index.js"></script>
 </body>
 </html>

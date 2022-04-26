@@ -7,6 +7,7 @@ const ipOutput = document.querySelector('#ip');
 const locationOutput = document.querySelector('#location');
 const timezoneOutput = document.querySelector('#timezone');
 const ispOutput = document.querySelector('#isp'); //поля с выводом результата запроса геолокации
+const pointer  = document.querySelector('.pointer');
  
 btn.addEventListener('click', submitIp);   
 form.addEventListener('submit', submitIp); //основной функционал — получаем IP, отображаем карту
@@ -20,8 +21,8 @@ async function startIp(){  //отображаем локацию, с котор�
         });
     let result = await response.json();
     input.value = sanitize(result.ip);
-    const clickEvent = new Event("click", {"bubbles":true, "cancelable":false});
-    btn.dispatchEvent(clickEvent); //я не знаю как нормально инициализировать карту — мне нужно в submitIp передать ивент, чтобы event.preventDefault() формы сработал. Поэтому я симулирую клик мышкой на кнопку... Звучит супер-тупо но работает. 
+    const clickEvent = new Event("click", {"bubbles":true, "cancelable":false}); //я не знаю как нормально инициализировать карту — мне нужно в submitIp передать ивент, чтобы event.preventDefault() формы сработал. Поэтому я симулирую клик мышкой на кнопку... Звучит супер-тупо но работает. 
+    btn.dispatchEvent(clickEvent); //если отказаться от формы то естественно работает лучше — можно инициализировать напрямую не боясь перезагрузки страницы 
     input.value = '';
 }
 
@@ -54,6 +55,12 @@ function initMap(lat, lng, ip, country, loc, timezone, isp) {  //отрисов�
     locationOutput.textContent = country + ' ' + loc;
     timezoneOutput.textContent = timezone;
     ispOutput.textContent = isp;
+    const marker = new mapboxgl.Marker({
+        element: pointer,
+        anchor: 'bottom'
+    }).setLngLat([lat, lng])
+        .addTo(map);
+    pointer.style.display = 'block';
 }
 
 //---------------------------------------------------------------normal func block--------------------------------------------------------------
