@@ -31,6 +31,24 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    position: relative;
+  }
+  .search-bar::after{
+    content: 'You have entered an invalid IP address!';
+    display: none;
+    background-color: white;
+    width: fit-content;
+    border: 2px solid black;
+    top: 100%;
+    position: absolute;
+    padding: 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 17%);
+    border-radius: 10px 10px 10px 10px;
+  }
+  .search-bar.show::after{
+    display: block;
   }
   .search-bar__input {
     width: 100%;
