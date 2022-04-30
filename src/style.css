@@ -34,8 +34,8 @@
     position: relative;
   }
   .search-bar::after{
-    content: 'You have entered an invalid IP address!';
-    display: none;
+    content: 'You have entered an invalid IP address or domain name!';
+    transform: scale(0);
     background-color: white;
     width: fit-content;
     border: 2px solid black;
@@ -48,7 +48,8 @@
     border-radius: 10px 10px 10px 10px;
   }
   .search-bar.show::after{
-    display: block;
+    transform: scale(1);
+    transition: transform ease-out 70ms;
   }
   .search-bar__input {
     width: 100%;

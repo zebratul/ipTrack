@@ -2,6 +2,6 @@ export function validateIPaddress(userInput) {  //валидация инпут�
     if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(userInput)) {  
       return true
     }  
-    console.log("You have entered an invalid IP address!");
+    console.log("whatever you submitted wasnt an IP adress");
     return false
 }

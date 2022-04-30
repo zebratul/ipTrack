@@ -1,10 +1,10 @@
 {
   "name": "iptrack",
   "version": "1.0.0",
-  "main": "app.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --out-dir=build"
+    "watch": "parcel watch index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zebratul/ipTrack#readme",
   "dependencies": {
+    "dns": "^0.2.2",
     "mapbox-gl": "^2.8.2",
     "parcel": "^2.0.0-rc.0"
   },
